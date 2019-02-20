@@ -31,18 +31,4 @@ public class AppDataManager implements DataManager {
         this.dbHelper = dbHelper;
     }
 
-    @Override
-    public void saveToken(String token) {
-        dbHelper.saveToken(token);
-    }
-
-    @Override
-    public void insertUser(User user) {
-        dbHelper.insertUser(user);
-    }
-
-    @Override
-    public LiveData<List<User>> getAllUsers() {
-        return dbHelper.getAllUsers();
-    }
 }

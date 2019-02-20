@@ -63,7 +63,6 @@ public abstract class AppModule {
     static AppDatabase provideAppDatabase(@DatabaseInfo String dbName, @ApplicationContext Context context) {
         return Room
                 .databaseBuilder(context, AppDatabase.class, dbName)
-//                .allowMainThreadQueries()
                 .fallbackToDestructiveMigration()
                 .build();
     }
